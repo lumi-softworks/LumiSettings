@@ -1,5 +1,7 @@
 # LumiSettings
 
+📖 English | [中文版](README_zh.md)
+
 Shared settings provider contracts and SwiftUI navigation for Coffic applications.
 
 `ProviderSettingView` provides:
