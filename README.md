@@ -14,11 +14,11 @@ Shared settings provider contracts and SwiftUI navigation for Coffic application
 Add the package and product dependency:
 
 ```swift
-.package(url: "https://github.com/CofficLab/LumiSettings.git", from: "1.0.0")
+.package(url: "https://github.com/lumi-softworks/LumiSettings.git", from: "1.0.0")
 ```
 
 ```swift
 .product(name: "ProviderSettingView", package: "LumiSettings")
 ```
 
-The package depends on [LumiUI](https://github.com/CofficLab/LumiUI) for shared visual components. Window creation, app navigation bars, and app-specific settings pages remain in the host application.
+The package depends on [LumiUI](https://github.com/lumi-softworks/LumiUI) for shared visual components. Window creation, app navigation bars, and app-specific settings pages remain in the host application.

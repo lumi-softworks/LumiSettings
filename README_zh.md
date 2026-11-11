@@ -14,12 +14,12 @@ Coffic 应用共享的设置 provider 契约与 SwiftUI 导航。
 添加包与 product 依赖：
 
 ```swift
-.package(url: "https://github.com/CofficLab/LumiSettings.git", from: "1.0.0")
+.package(url: "https://github.com/lumi-softworks/LumiSettings.git", from: "1.0.0")
 ```
 
 ```swift
 .product(name: "ProviderSettingView", package: "LumiSettings")
 ```
 
-本包依赖 [LumiUI](https://github.com/CofficLab/LumiUI) 提供共享视觉组件。
+本包依赖 [LumiUI](https://github.com/lumi-softworks/LumiUI) 提供共享视觉组件。
 窗口创建、应用导航栏与应用专属设置页面仍留在宿主应用中。
