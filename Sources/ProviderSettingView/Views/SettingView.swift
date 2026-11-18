@@ -25,6 +25,10 @@ struct SettingView<Provider: SettingViewProviding>: View {
 #if os(iOS)
         IOSSettingsNavigationView(provider: provider)
 #else
+        // Provider 不是 ObservableObject：选中入口变化只通过观察回调自增
+        // observationRevision。body 必须读取它才会重算，否则点击左侧入口
+        // 后右侧详情不刷新（iOS 分支用 onChange 读取，语义相同）。
+        let _ = observationRevision
         AppSettingsSidebarShell { sidebar } detail: { detail }
             .frame(minWidth: 960, minHeight: 520)
             .background(theme.background)
