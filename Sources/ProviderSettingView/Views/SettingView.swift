@@ -22,7 +22,7 @@ struct SettingView<Provider: SettingViewProviding>: View {
 
     @ViewBuilder
     var body: some View {
-#if os(iOS)
+#if os(iOS) || os(visionOS)
         IOSSettingsNavigationView(provider: provider)
 #else
         // Provider 不是 ObservableObject：选中入口变化只通过观察回调自增
@@ -43,7 +43,7 @@ struct SettingView<Provider: SettingViewProviding>: View {
 #endif
     }
 
-#if !os(iOS)
+#if !os(iOS) && !os(visionOS)
     private var sidebar: some View {
         AppSettingsSidebarContainer(width: 220) {
             VStack(alignment: .leading, spacing: 10) {
